@@ -133,14 +133,15 @@ $warning-color: get-color(warning);
 $alert-color: get-color(alert);
 
 @mixin foundation-global-styles {
-  @include -zf-normalize;
+  //@include foundation-normalize;       // TODO finish global first, then do dis
 
   // These styles are applied to a <meta> tag, which is read by the Foundation JavaScript
   .foundation-mq {
     font-family: '#{-zf-bp-serialize($breakpoints)}';
   }
 
-  html {
+  // TTM - used to be in html element
+  #ttm_main-nav {
     box-sizing: border-box;
     font-size: $global-font-size;
   }
@@ -152,22 +153,20 @@ $alert-color: get-color(alert);
     box-sizing: inherit;
   }
 
-  // Default body styles
-  body {
-    margin: 0;
-    padding: 0;
+  // Default body styles      // TTM - used to be in body element
+  margin: 0;
+  padding: 0;
 
-    background: $body-background;
+  background: $body-background;
 
-    font-family: $body-font-family;
-    font-weight: $global-weight-normal;
-    line-height: $global-lineheight;
-    color: $body-font-color;
+  font-family: $body-font-family;
+  font-weight: $global-weight-normal;
+  line-height: $global-lineheight;
+  color: $body-font-color;
 
-    @if ($body-antialiased) {
-      -webkit-font-smoothing: antialiased;
-      -moz-osx-font-smoothing: grayscale;
-    }
+  @if ($body-antialiased) {
+    -webkit-font-smoothing: antialiased; // sass-lint:disable-line no-vendor-prefixes
+    -moz-osx-font-smoothing: grayscale; // sass-lint:disable-line no-vendor-prefixes
   }
 
   img {
