@@ -141,7 +141,8 @@ $global-color-pick-contrast-tolerance: 0 !default;
     font-family: '#{-zf-bp-serialize($breakpoints)}';
   }
 
-  html {
+  // TTM - used to be in html element
+  #ttm_main-nav {
     box-sizing: border-box;
     font-size: $global-font-size;
   }
@@ -153,22 +154,20 @@ $global-color-pick-contrast-tolerance: 0 !default;
     box-sizing: inherit;
   }
 
-  // Default body styles
-  body {
-    margin: 0;
-    padding: 0;
+  // Default body styles      // TTM - used to be in body element
+  margin: 0;
+  padding: 0;
 
-    background: $body-background;
+  background: $body-background;
 
-    font-family: $body-font-family;
-    font-weight: $global-weight-normal;
-    line-height: $global-lineheight;
-    color: $body-font-color;
+  font-family: $body-font-family;
+  font-weight: $global-weight-normal;
+  line-height: $global-lineheight;
+  color: $body-font-color;
 
-    @if ($body-antialiased) {
-      -webkit-font-smoothing: antialiased; // sass-lint:disable-line no-vendor-prefixes
-      -moz-osx-font-smoothing: grayscale; // sass-lint:disable-line no-vendor-prefixes
-    }
+  @if ($body-antialiased) {
+    -webkit-font-smoothing: antialiased; // sass-lint:disable-line no-vendor-prefixes
+    -moz-osx-font-smoothing: grayscale; // sass-lint:disable-line no-vendor-prefixes
   }
 
   img {
