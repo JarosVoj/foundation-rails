@@ -56,33 +56,14 @@
      *    IE on Windows Phone and in iOS.
      */
 
-    html {
-      font-family: $base-font-family; /* 1 */
-      @if $normalize-vertical-rhythm {
-        // Correct old browser bug that prevented accessible resizing of text
-        // when root font-size is set with px or em.
-        font-size: ($base-font-size / 16px) * 100%;
-        line-height: ($base-line-height / $base-font-size) * 1em; /* 2 */
-      }
-      @else {
-        line-height: 1.15; /* 2 */
-      }
-      -ms-text-size-adjust: 100%; /* 3 */
-      -webkit-text-size-adjust: 100%; /* 3 */
-    }
+    // Removed html block along with everything it contained, except following 2 lines
+    -ms-text-size-adjust: 100%; /* 3 */
+    -webkit-text-size-adjust: 100%; /* 3 */
   }
 
   @if _normalize-include(sections) {
     /* Sections
        ========================================================================== */
-
-    /**
-     * Remove the margin in all browsers (opinionated).
-     */
-
-    body {
-      margin: 0;
-    }
 
     /**
      * Add the correct display in IE 9-.
