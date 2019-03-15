@@ -65,7 +65,7 @@
 
 // Layout components
 @import 'components/off-canvas';
-@import 'components/reveal';
+//@import 'components/reveal';
 @import 'components/sticky';
 @import 'components/title-bar';
 @import 'components/top-bar';
@@ -139,6 +139,7 @@
   @include foundation-off-canvas;
   @include foundation-reveal;
   @include foundation-sticky;
+  //@include foundation-reveal;
   @include foundation-title-bar;
   @include foundation-top-bar;
 

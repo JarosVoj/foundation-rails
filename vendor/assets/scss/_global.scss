@@ -133,13 +133,16 @@ $global-color-pick-contrast-tolerance: 0 !default;
 // Internal variables used for colors
 @include add-foundation-colors;
 
-@mixin foundation-global-styles {
-  @include foundation-normalize;
-
+// Originally located in foundation-global-styles mixin. Moved here to NOT TTM namespace this breakpoint init.
+@mixin ttm-foundation-breakpoint-init {
   // These styles are applied to a <meta> tag, which is read by the Foundation JavaScript
   .foundation-mq {
     font-family: '#{-zf-bp-serialize($breakpoints)}';
   }
+}
+
+@mixin foundation-global-styles {
+  @include -zf-normalize;  
 
   // TTM - used to be in html element
   #ttm_main-nav {
