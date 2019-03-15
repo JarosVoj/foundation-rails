@@ -132,13 +132,16 @@ $success-color: get-color(success);
 $warning-color: get-color(warning);
 $alert-color: get-color(alert);
 
-@mixin foundation-global-styles {
-  @include -zf-normalize;
-
+// Originally located in foundation-global-styles mixin. Moved here to NOT TTM namespace this breakpoint init.
+@mixin ttm-foundation-breakpoint-init {
   // These styles are applied to a <meta> tag, which is read by the Foundation JavaScript
   .foundation-mq {
     font-family: '#{-zf-bp-serialize($breakpoints)}';
   }
+}
+
+@mixin foundation-global-styles {
+  @include -zf-normalize;  
 
   // TTM - used to be in html element
   #ttm_main-nav {
