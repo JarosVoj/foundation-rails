@@ -55,7 +55,7 @@
 @import 'components/orbit';
 @import 'components/pagination';
 @import 'components/progress-bar';
-@import 'components/reveal';
+//@import 'components/reveal';
 @import 'components/slider';
 @import 'components/sticky';
 @import 'components/switch';
@@ -112,7 +112,7 @@
   @include foundation-progress-bar;
   @include foundation-slider;
   @include foundation-sticky;
-  @include foundation-reveal;
+  //@include foundation-reveal;
   @include foundation-switch;
   @include foundation-table;
   @include foundation-tabs;
