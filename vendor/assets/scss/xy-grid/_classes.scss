@@ -170,7 +170,7 @@
 
     // Negative margin for grids within `grid-container/grid-container.fluid`
     // This allows margin and padding grids to line up with eachother
-    .grid-container:not(.full) > & {
+    .grid-container:not(.full) > .grid-padding-x {
       @include xy-gutters($negative: true);
     }
 
