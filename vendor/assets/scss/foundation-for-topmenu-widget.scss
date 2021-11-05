@@ -80,11 +80,13 @@
   @import 'components/thumbnail';
   @import 'components/tooltip';
   @import 'prototype/prototype';
+}
 
-  @mixin foundation-everything(
-    $flex: true,
-    $prototype: false
-  ) {
+@mixin foundation-everything(
+  $flex: true,
+  $prototype: false
+) {
+  #tieto_topmenu {
     @if $flex {
       $global-flexbox: true !global;
     }
@@ -101,6 +103,7 @@
         @include foundation-flex-grid;
       }
     }
+
     @include foundation-typography;
     @include foundation-forms;
     @include foundation-button;
