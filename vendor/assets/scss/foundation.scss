@@ -5,19 +5,6 @@
  * Licensed under MIT Open Source
  */
 
-// This file is meant to be used for Topmenu non-widget purposes (e.g. instruction page), it does not contain namespacing
-
-
-// Originally located in foundation-global-styles mixin. Moved here to NOT Topmenu-namespace this breakpoint init.
-@mixin ttm-foundation-breakpoint-init {
-  // These styles are applied to a <meta> tag, which is read by the Foundation JavaScript
-  #tieto_topmenu {
-    .foundation-mq {
-      font-family: '#{-zf-bp-serialize($breakpoints)}';
-    }
-  }
-}
-
 // Dependencies
 @import '../_vendor/normalize-scss/sass/normalize';
 @import '../_vendor/sassy-lists/stylesheets/helpers/missing-dependencies';
@@ -28,7 +15,8 @@
 @import '../_vendor/sassy-lists/stylesheets/functions/replace';
 @import '../_vendor/sassy-lists/stylesheets/functions/to-list';
 
-// Import your own `settings` here or
+// Settings
+// import your own `settings` here or
 // import and modify the default settings through
 // @import 'settings/settings';
 
@@ -63,7 +51,7 @@
 @import 'components/media-object';
 @import 'components/menu';
 @import 'components/menu-icon';
-//@import 'components/off-canvas';  // Could not be namespaced for Topmenu widget, was removed from here too
+@import 'components/off-canvas';
 @import 'components/orbit';
 @import 'components/pagination';
 @import 'components/progress-bar';
@@ -71,7 +59,7 @@
 @import 'components/slider';
 @import 'components/sticky';
 @import 'components/switch';
-//@import 'components/table';  // Could not be namespaced for Topmenu widget, was removed from here too
+@import 'components/table';
 @import 'components/tabs';
 @import 'components/title-bar';
 @import 'components/top-bar';
