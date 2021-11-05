@@ -5,6 +5,15 @@
  * Licensed under MIT Open Source
  */
 
+// Originally located in foundation-global-styles mixin. Moved here to NOT Topmenu-namespace this breakpoint init.
+@mixin ttm-foundation-breakpoint-init {
+  // These styles are applied to a <meta> tag, which is read by the Foundation JavaScript
+  .foundation-mq {
+    font-family: '#{-zf-bp-serialize($breakpoints)}';
+  }
+}
+
+// Topmenu main namespace
 #tieto_topmenu {
   // Dependencies
   @import '../_vendor/normalize-scss/sass/normalize';
