@@ -41,7 +41,7 @@
   // Global variables and styles
   @import 'global';
 
-  // Components
+  // Components import
   @import 'grid/grid';
   @import 'xy-grid/xy-grid';
   @import 'typography/typography';
@@ -195,6 +195,7 @@
     @include foundation-flex-grid;
   }
 
+  // Component include
   @include foundation-typography;
   @include foundation-forms;
   @include foundation-button;

@@ -302,29 +302,31 @@ $table-stack-breakpoint: medium !default;
 }
 
 @mixin foundation-table($nest: false) {
-  table {
-    @include table($nest: $nest);
-  }
-
-  table.stack {
-    @include breakpoint($table-stack-breakpoint down) {
-      @include table-stack;
-    }
-  }
-
-  table.scroll {
-    @include table-scroll;
-  }
-
-  table.hover {
-    @include table-hover;
-  }
-
-  .table-scroll {
-    overflow-x: auto;
-
+  #tieto_topmenu {
     table {
-      width: auto;
+      @include table($nest: $nest);
+    }
+
+    table.stack {
+      @include breakpoint($table-stack-breakpoint down) {
+        @include table-stack;
+      }
+    }
+
+    table.scroll {
+      @include table-scroll;
+    }
+
+    table.hover {
+      @include table-hover;
+    }
+
+    .table-scroll {
+      overflow-x: auto;
+
+      table {
+        width: auto;
+      }
     }
   }
 }

@@ -436,68 +436,70 @@ $breakpoint: small
 }
 
 @mixin foundation-off-canvas {
-  @include off-canvas-basics;
+  #tieto_topmenu {
+    @include off-canvas-basics;
 
-  // Off-canvas wrapper
-  .off-canvas-wrapper {
-    @include off-canvas-wrapper;
-  }
-
-  // Off-canvas container
-  .off-canvas {
-    @include off-canvas-base;
-
-    // Force position absolute for nested off-canvas because fixed doesn't work for push transition within the transform scope.
-    @at-root .#{$maincontent-class} & {
-      // NOTE: since overlap transition is currently forced if nested, there's no need to force position absolute until nested push transition is supported.
-      // position: absolute;
+    // Off-canvas wrapper
+    .off-canvas-wrapper {
+      @include off-canvas-wrapper;
     }
-  }
 
-  // Off-canvas container with absolute position
-  .off-canvas-absolute {
-    @include off-canvas-base($fixed: false);
-  }
+    // Off-canvas container
+    .off-canvas {
+      @include off-canvas-base;
 
-  // Off-canvas position classes
-  .position-left    { @include off-canvas-position(left,   horizontal); }
-  .position-right   { @include off-canvas-position(right,  horizontal); }
-  .position-top     { @include off-canvas-position(top,    vertical); }
-  .position-bottom  { @include off-canvas-position(bottom, vertical); }
+      // Force position absolute for nested off-canvas because fixed doesn't work for push transition within the transform scope.
+      @at-root .#{$maincontent-class} & {
+        // NOTE: since overlap transition is currently forced if nested, there's no need to force position absolute until nested push transition is supported.
+        // position: absolute;
+      }
+    }
 
-  .off-canvas-content {
-    @include off-canvas-content;
-  }
+    // Off-canvas container with absolute position
+    .off-canvas-absolute {
+      @include off-canvas-base($fixed: false);
+    }
 
-  // Reveal off-canvas panel on larger screens
-  @each $name, $value in $breakpoint-classes {
-    @if $name != $-zf-zero-breakpoint {
-      @include breakpoint($name) {
-        .position-left.reveal-for-#{$name} {
-          @include off-canvas-reveal(left, $offcanvas-reveal-zindex, $maincontent-class, $name);
-        }
+    // Off-canvas position classes
+    .position-left    { @include off-canvas-position(left,   horizontal); }
+    .position-right   { @include off-canvas-position(right,  horizontal); }
+    .position-top     { @include off-canvas-position(top,    vertical); }
+    .position-bottom  { @include off-canvas-position(bottom, vertical); }
 
-        .position-right.reveal-for-#{$name} {
-          @include off-canvas-reveal(right, $offcanvas-reveal-zindex, $maincontent-class, $name);
-        }
+    .off-canvas-content {
+      @include off-canvas-content;
+    }
 
-        .position-top.reveal-for-#{$name} {
-          @include off-canvas-reveal(top, $offcanvas-reveal-zindex, $maincontent-class, $name);
-        }
+    // Reveal off-canvas panel on larger screens
+    @each $name, $value in $breakpoint-classes {
+      @if $name != $-zf-zero-breakpoint {
+        @include breakpoint($name) {
+          .position-left.reveal-for-#{$name} {
+            @include off-canvas-reveal(left, $offcanvas-reveal-zindex, $maincontent-class, $name);
+          }
 
-        .position-bottom.reveal-for-#{$name} {
-          @include off-canvas-reveal(bottom, $offcanvas-reveal-zindex, $maincontent-class, $name);
+          .position-right.reveal-for-#{$name} {
+            @include off-canvas-reveal(right, $offcanvas-reveal-zindex, $maincontent-class, $name);
+          }
+
+          .position-top.reveal-for-#{$name} {
+            @include off-canvas-reveal(top, $offcanvas-reveal-zindex, $maincontent-class, $name);
+          }
+
+          .position-bottom.reveal-for-#{$name} {
+            @include off-canvas-reveal(bottom, $offcanvas-reveal-zindex, $maincontent-class, $name);
+          }
         }
       }
     }
-  }
 
-  // Move in-canvas for larger screens
-  @each $name, $value in $breakpoint-classes {
-    @if $name != $-zf-zero-breakpoint {
-      @include breakpoint($name) {
-        .off-canvas.in-canvas-for-#{$name} {
-          @include in-canvas;
+    // Move in-canvas for larger screens
+    @each $name, $value in $breakpoint-classes {
+      @if $name != $-zf-zero-breakpoint {
+        @include breakpoint($name) {
+          .off-canvas.in-canvas-for-#{$name} {
+            @include in-canvas;
+          }
         }
       }
     }
