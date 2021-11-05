@@ -63,7 +63,7 @@
 @import 'components/media-object';
 @import 'components/menu';
 @import 'components/menu-icon';
-@import 'components/off-canvas';
+//@import 'components/off-canvas';  // Could not namespaced for Topmenu widget, was removed from here too
 @import 'components/orbit';
 @import 'components/pagination';
 @import 'components/progress-bar';
@@ -71,7 +71,7 @@
 @import 'components/slider';
 @import 'components/sticky';
 @import 'components/switch';
-@import 'components/table';
+//@import 'components/table';  // Could not namespaced for Topmenu widget, was removed from here too
 @import 'components/tabs';
 @import 'components/title-bar';
 @import 'components/top-bar';
