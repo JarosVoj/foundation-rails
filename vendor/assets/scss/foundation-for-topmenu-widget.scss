@@ -9,6 +9,16 @@
 // does not influence styling of hosting applications
 
 
+// Dependencies
+@import '../_vendor/normalize-scss/sass/normalize';
+@import '../_vendor/sassy-lists/stylesheets/helpers/missing-dependencies';
+@import '../_vendor/sassy-lists/stylesheets/helpers/true';
+@import '../_vendor/sassy-lists/stylesheets/functions/contain';
+@import '../_vendor/sassy-lists/stylesheets/functions/purge';
+@import '../_vendor/sassy-lists/stylesheets/functions/remove';
+@import '../_vendor/sassy-lists/stylesheets/functions/replace';
+@import '../_vendor/sassy-lists/stylesheets/functions/to-list';
+
 // Originally located in foundation-global-styles mixin. Moved here to NOT Topmenu-namespace this breakpoint init.
 @mixin ttm-foundation-breakpoint-init {
   // These styles are applied to a <meta> tag, which is read by the Foundation JavaScript
@@ -21,18 +31,7 @@
 
 // Topmenu main namespace
 #tieto_topmenu {
-  // Dependencies
-  @import '../_vendor/normalize-scss/sass/normalize';
-  @import '../_vendor/sassy-lists/stylesheets/helpers/missing-dependencies';
-  @import '../_vendor/sassy-lists/stylesheets/helpers/true';
-  @import '../_vendor/sassy-lists/stylesheets/functions/contain';
-  @import '../_vendor/sassy-lists/stylesheets/functions/purge';
-  @import '../_vendor/sassy-lists/stylesheets/functions/remove';
-  @import '../_vendor/sassy-lists/stylesheets/functions/replace';
-  @import '../_vendor/sassy-lists/stylesheets/functions/to-list';
-
-  // Settings
-  // import your own `settings` here or
+  // Import your own `settings` here or
   // import and modify the default settings through
   // @import 'settings/settings';
 
