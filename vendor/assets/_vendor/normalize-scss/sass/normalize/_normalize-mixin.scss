@@ -1,3 +1,11 @@
+// Newer version of SASS gem in Top menu was complaining:
+// "!global assignments won't be able to declare new variables in future versions."
+// "Consider adding `$primary-color: null` at the top level"
+$-normalize-include: null;
+$-normalize-exclude: null;
+
+
+
 // Helper function for the normalize() mixin.
 @function _normalize-include($section, $exclude: null) {
   // Initialize the global variables needed by this function.

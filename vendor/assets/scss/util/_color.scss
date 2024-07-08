@@ -6,6 +6,18 @@
 
 $contrast-warnings: true !default;
 
+
+
+// Newer version of SASS gem in Top menu was complaining:
+// "!global assignments won't be able to declare new variables in future versions."
+// "Consider adding `$primary-color: null` at the top level"
+$primary-color: null;
+$secondary-color: null;
+$success-color: null;
+$warning-color: null;
+
+
+
 ////
 /// @group functions
 ////
